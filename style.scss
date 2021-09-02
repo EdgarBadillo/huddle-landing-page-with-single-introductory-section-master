@@ -16,6 +16,8 @@ font-size: 24px;
 line-height: 36px;
 text-align: center;
 color: #FFFFFF;
+width: 280px;
+height: 72px;
 }
 
 @mixin text__description {
@@ -27,6 +29,8 @@ color: #FFFFFF;
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
+    width: 304px;
+    height: 120px;
 
 }
 
@@ -48,9 +52,11 @@ color: #FFFFFF;
 
 body{
     
-    min-height:  100vh;
+    height:  100vh;
     background: url(/images/bg-mobile.svg), $backgroundColor;
     background-repeat: no-repeat;
+    
+    
     
 
 
@@ -59,10 +65,13 @@ body{
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin: 2rem;
-
+        align-items: center;
+        position: relative;
+        
         .logo{
-    
+            position: absolute;
+            top:1.5rem;
+            left: 2.2rem;
             background-image: url(/images/logo.svg);
             width: 120px;
             height: 25px;
@@ -72,6 +81,7 @@ body{
     
         }
 
+
         .images{
 
             background-image: url(/images/illustration-mockups.svg);
@@ -79,6 +89,7 @@ body{
             height: 209px;
             width: 296px;
             background-repeat: no-repeat;
+            margin-top: 7rem;
 
         }
 
@@ -88,6 +99,7 @@ body{
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            
 
             .text__title{
 
@@ -108,22 +120,32 @@ body{
                 
             }
 
-            .socialMedia{
-
-                width: 105px;
-                height: 30px;
-
-                .icon{
-
-                    width: 28px;
-                    height: 28px;
-                }
-            }
         }
-    
-
-
     }
+    .socialMedia{
 
+        width: 200px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+
+        
+        .circle{
+    
+            width: 2rem;
+            height: 2rem;
+            border: 0.798301px solid #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            
+        }
+        
+        
+    }
+    
 
 }
